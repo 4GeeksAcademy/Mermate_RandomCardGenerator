@@ -3,27 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random card Generator.js</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <div class="card">
+      <div class="cardTopSuit" id="topSuit"></div>
+      <div class="cardFaceNumber" id="cardNumber"></div>
+      <div class="cardBottomSuit" id="bottomSuit"></div>
     </div>
+
+    <div class=" container">
+      <button
+        onclick="getRandomCard()"
+        type="button"
+        id="refresh_Button"
+        class="btn btn-light button"
+      >
+        Click to get a new card
+      </button>
+    </div>
+    <br />
+
+    <div class="container">
+      <button
+        onclicK="changeDimensions()"
+        type="button"
+        id="Change_Card_Size"
+        class="btn btn-light button"
+      >
+        Click to change your card size
+      </button>
+      <label for="width"> Select width:</label>
+      <input type="text" name="width" id="width" />
+      <label for="height">Select height:</label>
+      <input type="text" name="height" id="height" />
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
