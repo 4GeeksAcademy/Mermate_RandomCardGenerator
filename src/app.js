@@ -24,6 +24,7 @@ const numbers = [
 
 window.onload = function() {
   getRandomCard();
+  changeDimensions();
 
   setInterval(window.onload, 5000);
 };
@@ -47,19 +48,10 @@ function getRandomCard() {
   return randomSuit + randomSuit + randomNumber;
 }
 
-const refreshButton = document.getElementById("refresh_Button");
-
-refreshButton.addEventListener("click", function() {
-  getRandomCard();
-});
-
 function changeDimensions() {
   document.getElementById("card").style.width =
-    ocument.querySelector("").value + "px";
+    document.getElementById("width").value + "px";
+
+  document.getElementById("card").style.height =
+    document.getElementById("height").value + "px";
 }
-
-/*const ChangeSize = document.getElementById("Change_Card_Size");
-
-ChangeSize.addEventListener("click", function() {
-  getRandomCard();
-});*/
