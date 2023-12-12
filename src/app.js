@@ -52,17 +52,3 @@ const refreshButton = document.getElementById("refresh_Button");
 refreshButton.addEventListener("click", function() {
   getRandomCard();
 });
-
-function changeCardDimensions() {
-  document.getElementById("card").style.width =
-    document.getElementById("width").value + "px";
-
-  document.getElementById("card").style.height =
-    document.getElementById("height").value + "px";
-}
-
-const ChangeSize = document.getElementById("Change_Card_Size");
-
-ChangeSize.addEventListener("click", function() {
-  changeCardDimensions();
-});
